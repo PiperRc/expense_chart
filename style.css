@@ -48,3 +48,57 @@ main {
   font-weight: bold;
   padding-top:.5rem;
 }
+
+
+/*  */
+.breakdown {
+    background-color: var(--very-pale-orange);
+    margin-top: 2rem;
+
+}
+.graph h1{
+    font-size: 1.8rem;
+}
+
+.graph section{
+    display: flex;
+    column-gap: 1rem;
+    margin-top:4rem;
+}
+
+.graph section div{
+    width:calc(100%/7);
+    background-color: aqua;
+    height:4rem;
+
+}
+
+.graph section div:nth-child(1){
+   background-color: red;
+   height:4rem;
+}
+
+.month{
+   
+   border-top:1px solid purple;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.month span{
+    display: block;
+}
+
+.month span:nth-child(1){
+    text-align: right;
+}
+
+.month p{
+    font-size: 1.2rem;
+}
+
+.month div:nth-child(1) p:nth-child(2){
+    font-size: 2.4rem;
+    padding-top:.5rem;
+}
