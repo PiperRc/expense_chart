@@ -20,11 +20,17 @@ html {
 
 body {
   background-color: var(--background-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
 }
 
 main {
   width: 95%;
-  margin: 0 auto;
+  max-width: 36rem;
+  /* margin: 0 auto; */
 }
 
 /* top part */
@@ -69,41 +75,60 @@ h1 {
 
 .graph {
   display: flex;
-  column-gap: 2rem;
+  column-gap: 1.8rem;
   padding-top: 5rem;
   align-items: end;
 }
 .graph div {
   height: var(--base-height);
-  width: 40rem;
+  width: 3.2rem;
+
   background-color: var(--main-color);
+  cursor: pointer;
 }
 
-.graph div:nth-child(1) {
+.graph div:hover {
+  opacity: 0.5;
+}
+
+.value {
+  opacity: 0;
+  color: white;
+  background-color: black;
+  padding: 0.5rem;
+  font-weight: bold;
+  border-radius: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+section.graph > section:hover .value {
+  opacity: 1;
+}
+.graph section:nth-child(1) div {
   height: calc((var(--base-height) * 0.45));
 }
 
-.graph div:nth-child(2) {
+.graph section:nth-child(2) div {
   height: calc((var(--base-height) * 0.75));
 }
 
-.graph div:nth-child(3) {
+.graph section:nth-child(3) div {
   background-color: var(--secondary-color);
 }
 
-.graph div:nth-child(4) {
+.graph section:nth-child(4) div {
   height: calc((var(--base-height) * 0.7));
 }
 
-.graph div:nth-child(5) {
+.graph section:nth-child(5) div {
   height: calc((var(--base-height) * 0.6));
 }
 
-.graph div:nth-child(6) {
+.graph section:nth-child(6) div {
   height: calc((var(--base-height) * 0.8));
 }
 
-.graph div:nth-child(7) {
+.graph section:nth-child(7) div {
   height: calc((var(--base-height) * 0.61));
 }
 
